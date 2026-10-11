@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "id": "osaka-v2",
+  "title": "大阪三日行",
+  "start_date": "2026-10-01",
+  "end_date": "2026-10-03",
+  "timezone": "Asia/Tokyo",
+  "travellers": 2,
+  "currency": "TWD",
+  "budget": 40000,
+  "interests": ["food", "culture"],
+  "places": [
+    {
+      "id": "hotel",
+      "name": "難波住宿",
+      "location": {"latitude": 34.6659, "longitude": 135.5013},
+      "timezone": "Asia/Tokyo"
+    },
+    {
+      "id": "kuromon",
+      "name": "黑門市場",
+      "location": {"latitude": 34.6653, "longitude": 135.5067},
+      "timezone": "Asia/Tokyo",
+      "source_ids": ["source-kuromon"]
+    },
+    {
+      "id": "kiyomizu",
+      "name": "清水寺",
+      "location": {"latitude": 34.9949, "longitude": 135.785},
+      "timezone": "Asia/Tokyo",
+      "source_ids": ["source-kiyomizu"]
+    }
+  ],
+  "days": [
+    {"on_date": "2026-10-01", "start_place_id": "hotel", "end_place_id": "hotel"},
+    {"on_date": "2026-10-02", "start_place_id": "kiyomizu", "end_place_id": "kiyomizu"},
+    {"on_date": "2026-10-03", "start_place_id": "hotel", "end_place_id": "hotel"}
+  ],
+  "flight_segments": [
+    {
+      "id": "outbound",
+      "origin": "TPE",
+      "destination": "KIX",
+      "departure": "2026-10-01T06:30:00+08:00",
+      "arrival": "2026-10-01T10:00:00+09:00"
+    },
+    {
+      "id": "return",
+      "origin": "KIX",
+      "destination": "TPE",
+      "departure": "2026-10-03T19:00:00+09:00",
+      "arrival": "2026-10-03T21:10:00+08:00"
+    }
+  ],
+  "activities": [
+    {
+      "id": "market",
+      "name": "黑門市場散策",
+      "place_id": "kuromon",
+      "duration_minutes": 90,
+      "opening_windows": [{"on_date": "2026-10-01", "start": "11:00", "end": "16:00"}],
+      "priority": 80,
+      "tags": ["food"],
+      "source_ids": ["source-kuromon"]
+    },
+    {
+      "id": "temple",
+      "name": "清水寺預約時段",
+      "place_id": "kiyomizu",
+      "duration_minutes": 120,
+      "opening_windows": [{"on_date": "2026-10-02", "start": "06:00", "end": "18:00"}],
+      "fixed_start": "2026-10-02T10:00:00+09:00",
+      "locked": true,
+      "buffer_before_minutes": 15,
+      "buffer_after_minutes": 15,
+      "priority": 100,
+      "tags": ["culture"],
+      "source_ids": ["source-kiyomizu"]
+    }
+  ],
+  "stays": [
+    {
+      "id": "stay-1",
+      "name": "難波住宿",
+      "place_id": "hotel",
+      "check_in": "2026-10-01T15:00:00+09:00",
+      "check_out": "2026-10-03T11:00:00+09:00"
+    }
+  ],
+  "expenses": [
+    {"id": "stay-cost", "category": "stay", "amount": 12000, "currency": "TWD", "status": "quoted"},
+    {"id": "activity-cost", "category": "activity", "amount": 1500, "currency": "TWD", "status": "planned"}
+  ],
+  "checklist": [
+    {"id": "passport", "text": "確認護照效期", "category": "document"},
+    {"id": "flight-recheck", "text": "出發前重查航班價格與班次", "category": "recheck"}
+  ],
+  "sources": [
+    {
+      "id": "source-kuromon",
+      "url": "https://www.kuromon.com/en/",
+      "provider": "official",
+      "checked_at": "2026-09-19T00:00:00Z",
+      "status": "verified"
+    },
+    {
+      "id": "source-kiyomizu",
+      "url": "https://www.kiyomizudera.or.jp/en/",
+      "provider": "official",
+      "checked_at": "2026-09-19T00:00:00Z",
+      "status": "verified"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "origin": "TPE",
+  "destination": "KIX",
+  "start_date": "2026-10-01",
+  "end_date": "2026-10-02",
+  "travellers": 1,
+  "budget": 5000,
+  "currency": "TWD",
+  "pace": "moderate",
+  "interests": ["food", "culture"],
+  "activities": [
+    {"name": "黑門市場", "duration_minutes": 120, "cost": 500, "latitude": 34.665, "longitude": 135.506, "open_weekdays": [1, 2, 3, 4, 5, 6], "interests": ["food"], "source_url": "https://www.kuromon.com/en/", "checked_at": "2026-09-19T00:00:00Z"},
+    {"name": "大阪城", "duration_minutes": 150, "cost": 600, "latitude": 34.687, "longitude": 135.526, "open_weekdays": [1, 2, 3, 4, 5, 6, 7], "interests": ["culture"], "source_url": "https://www.osakacastle.net/", "checked_at": "2026-09-19T00:00:00Z"}
+  ]
+}

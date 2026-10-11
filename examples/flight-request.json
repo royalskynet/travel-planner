@@ -1,0 +1,10 @@
+{
+  "slices": [
+    {"origin": "TPE", "destination": "KIX", "departure_date": "2026-10-01"},
+    {"origin": "KIX", "destination": "TPE", "departure_date": "2026-10-03"}
+  ],
+  "travellers": 2,
+  "cabin_class": "economy",
+  "currency": "TWD",
+  "language": "zh-TW"
+}

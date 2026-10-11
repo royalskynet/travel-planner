@@ -1,0 +1,4 @@
+interface:
+  display_name: "旅遊規劃助理"
+  short_description: "多航段、路線感知、預算與五格式輸出的可查證旅行規劃"
+  default_prompt: "使用 $travel-planner-assistant 建立可保存、可重排、有來源與衝突解釋的完整旅行計畫。"
